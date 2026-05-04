@@ -772,11 +772,29 @@ a { text-decoration: none; color: inherit; }
 }
 .price-cta:hover { background: var(--gold-light); letter-spacing: 5px; }
 .price-pix {
-  font-size: 10px; font-weight: 500;
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
   letter-spacing: 2px; text-transform: uppercase;
   color: var(--muted); text-align: center;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px 0 4px;
 }
-.price-pix strong { color: var(--accent); }
+.price-pix::before, .price-pix::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200,168,75,0.25));
+}
+.price-pix::after {
+  background: linear-gradient(to left, transparent, rgba(200,168,75,0.25));
+}
+.price-pix strong {
+  font-family: var(--serif);
+  font-size: 28px; font-weight: 300;
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1;
+}
 .price-secure {
   display: flex; align-items: center; justify-content: center;
   gap: 24px;
@@ -1503,7 +1521,7 @@ footer {
     <button class="price-cta" onclick="window.location.href='https://grandset-2.myshopify.com/cart/48904111849701:1'">
       Garantir minha coleção
     </button>
-    <p class="price-pix">Pix: <strong>R$&nbsp;399</strong> à vista</p>
+    <p class="price-pix">Pix à vista — <strong>R$&nbsp;399</strong></p>
     <div class="price-secure" role="list" aria-label="Garantias">
       <div class="secure-item" role="listitem"><div class="secure-dot"></div>Compra segura</div>
       <div class="secure-item" role="listitem"><div class="secure-dot"></div>Frete grátis</div>
