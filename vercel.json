@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/cart/:path*",
+      "destination": "https://grandset-2.myshopify.com/cart/:path*",
+      "permanent": false
+    }
+  ]
+}
